@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Name Printing Task</title>
+</head>
+<body>
+    <style>
+        html{
+            background-color: lightslategrey;
+        }
+        .task{
+            width: 18em;
+            position: absolute;
+            left: 50%;
+            top: 40%;
+            transform: translate(-50%, -50%);
+            box-shadow: 0 0 5px 5px rgb(97, 108, 116);
+        }
+        button{
+            background-color: rgb(3, 3, 73);
+            color: whitesmoke;
+            height: 50px;
+            width: 11em;
+            font-size: 20px;
+        }
+        p{  
+            width: 13em;
+            padding: 0.5em;
+            font-size: 20px;
+            font-weight: 700;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            border: 2px solid lightskyblue;
+            color: rgb(32, 35, 37);
+            border-radius: 20px;
+        }
+        a{
+            text-decoration: none;
+            font-size: 23px;
+            color: snow;
+        }
+        a:hover{
+            color: whitesmoke;
+            font-weight: 800;
+        }
+        a:active{
+            color: tomato;
+        }
+    </style>
+
+
+    <div class="task">
+    <button onclick="myName()">CLICK TO VIEW NAME</button> 
+    <br />
+    <br />
+    <p id="name"></p>
+    <a href="#">Resume Link</a>
+    </div>
+
+
+    <script>
+        function myName(){
+            document.getElementById('name').innerHTML = 'Markson Magdalene Nsikan';
+        };
+     </script>
+
+     
+    <script>
+        var today = new Date();
+        var hourNow = today.getHours() ;
+        var greeting;
+        if(hourNow > 18){
+            greeting = '<p>Good Evening, it is '+today+'</p>';
+        }else if(hourNow > 12){
+            greeting = '<p>Good Afternoon, it is '+ today+'</p>'
+        }else if(hourNow > 0){
+            greeting = '<p>Good Morning, it is '+ today+'</p>'
+        }else{
+            greeting = 'What time is it in the Planet are you existing in non-human?'
+        };
+        document.write(greeting);
+    </script>
+</body>
+</html>
